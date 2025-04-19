@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AHA Story Generator</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>AHA Story Generator</h1>
+      </div>
+      <div class="story-generator z-depth-5">
+        <div class="input-group">
+          <textarea
+            id="story-input"
+            placeholder="Enter your story prompt here..."
+            rows="10"
+          ></textarea>
+          <button id="generate-story-btn" class="btn purple darken-4">
+            Generate Story
+          </button>
+          <br>
+        </div>
+      </div>
+      <div id="spinner" class="spinner-wrapper">
+        <div class="spinner"></div>
+      </div>
+      <div id="generated-content" class="generated-content"></div>
+    </div>
+    <footer class="footer-card">
+      <p>&copy; AHA Story Generator 2025. All rights reserved.</p>
+    </footer>
+    <script type="module" src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
